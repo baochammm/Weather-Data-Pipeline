@@ -8,8 +8,8 @@ This project implements a simplified ETL (Extract–Load–Transform) pipeline t
 
 - Python
 - MySQL
-- Libraries: requests, mysql-connector-python, python-dotenv
-- Architecture: ELT with Staging & Fact layers
+- Libraries: requests, mysql-connector-python, python-dotenv, schedule
+- OpenWeatherMap REST API
 
 ## How to Run
 
@@ -18,7 +18,7 @@ This project implements a simplified ETL (Extract–Load–Transform) pipeline t
 ### 2.Install dependencies
 
 ```bash
-pip install requests mysql-connector-python python-dotenv
+pip install requests mysql-connector-python python-dotenv schedule
 ```
 
 ### 3.Configure environment variables
@@ -41,18 +41,10 @@ Execute the following SQL script in MySQL Workbench:
 sql/create_tables.sql
 ```
 
-### 5.Run data ingestion
+### 5.Run the pipeline
 
 ```bash
-python src/ingestion.py
-```
-
-### 6.Transform data
-
-Run the transformation scripts:
-
-```bash
-sql/transformations.sql
+python src/scheduler.py
 ```
 
 ## Result
