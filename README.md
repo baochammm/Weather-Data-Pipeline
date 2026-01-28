@@ -58,4 +58,4 @@ sql/transformations.sql
 ## Result
 
 The final `fact_weather` table provides a clean, query-ready format for BI tools or further data analysis.
-![Result](./asset/result.png)
+![Result](./assets/result.png)
